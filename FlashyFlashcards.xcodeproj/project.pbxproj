@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		634067381BED0C73001B283C /* UIColor+Flashy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634067371BED0C73001B283C /* UIColor+Flashy.swift */; };
+		6340673A1BED15BA001B283C /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634067391BED15BA001B283C /* Deck.swift */; };
+		6340673F1BED19AC001B283C /* DeckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340673E1BED19AC001B283C /* DeckManager.swift */; };
+		634067411BED32E2001B283C /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634067401BED32E2001B283C /* StudyViewController.swift */; };
+		6340674D1BED3C13001B283C /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6340674C1BED3C13001B283C /* iCarousel.m */; };
+		634067511BED3E43001B283C /* Flashcard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634067501BED3E43001B283C /* Flashcard.xib */; };
+		634067531BED3E4F001B283C /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634067521BED3E4F001B283C /* FlashcardView.swift */; };
 		6357E4261BEC7FC800BA25AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6357E4251BEC7FC800BA25AB /* AppDelegate.swift */; };
 		6357E42B1BEC7FC800BA25AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6357E4291BEC7FC800BA25AB /* Main.storyboard */; };
 		6357E42D1BEC7FC800BA25AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6357E42C1BEC7FC800BA25AB /* Assets.xcassets */; };
@@ -17,6 +24,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		634067371BED0C73001B283C /* UIColor+Flashy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Flashy.swift"; sourceTree = "<group>"; };
+		634067391BED15BA001B283C /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		6340673E1BED19AC001B283C /* DeckManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckManager.swift; sourceTree = "<group>"; };
+		634067401BED32E2001B283C /* StudyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
+		6340674A1BED3C12001B283C /* FlashyFlashcards-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlashyFlashcards-Bridging-Header.h"; sourceTree = "<group>"; };
+		6340674B1BED3C13001B283C /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		6340674C1BED3C13001B283C /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		634067501BED3E43001B283C /* Flashcard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Flashcard.xib; sourceTree = "<group>"; };
+		634067521BED3E4F001B283C /* FlashcardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
 		6357E4221BEC7FC800BA25AB /* FlashyFlashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashyFlashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6357E4251BEC7FC800BA25AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6357E42A1BEC7FC800BA25AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +55,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6340673B1BED186F001B283C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				634067391BED15BA001B283C /* Deck.swift */,
+				6340673E1BED19AC001B283C /* DeckManager.swift */,
+				6340674A1BED3C12001B283C /* FlashyFlashcards-Bridging-Header.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		6357E4191BEC7FC700BA25AB = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +86,7 @@
 			children = (
 				6357E4391BEC821500BA25AB /* Controllers */,
 				6357E43B1BEC823100BA25AB /* Views */,
+				6340673B1BED186F001B283C /* Model */,
 				6357E43A1BEC821F00BA25AB /* SupportingFiles */,
 			);
 			path = FlashyFlashcards;
@@ -69,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				6357E4371BEC802700BA25AB /* CategoryViewController.swift */,
+				634067401BED32E2001B283C /* StudyViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -76,6 +104,8 @@
 		6357E43A1BEC821F00BA25AB /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				6340674B1BED3C13001B283C /* iCarousel.h */,
+				6340674C1BED3C13001B283C /* iCarousel.m */,
 				6357E4251BEC7FC800BA25AB /* AppDelegate.swift */,
 				6357E42C1BEC7FC800BA25AB /* Assets.xcassets */,
 				6357E42E1BEC7FC800BA25AB /* LaunchScreen.storyboard */,
@@ -90,6 +120,9 @@
 				6357E4291BEC7FC800BA25AB /* Main.storyboard */,
 				63A070AF1BEC8901006A79EA /* CategoryCell.swift */,
 				63A070B11BEC8C53006A79EA /* DifficultyCell.swift */,
+				634067371BED0C73001B283C /* UIColor+Flashy.swift */,
+				634067501BED3E43001B283C /* Flashcard.xib */,
+				634067521BED3E4F001B283C /* FlashcardView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -126,6 +159,7 @@
 				TargetAttributes = {
 					6357E4211BEC7FC800BA25AB = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = Q3466BUWH2;
 					};
 				};
 			};
@@ -154,6 +188,7 @@
 			files = (
 				6357E4301BEC7FC800BA25AB /* LaunchScreen.storyboard in Resources */,
 				6357E42D1BEC7FC800BA25AB /* Assets.xcassets in Resources */,
+				634067511BED3E43001B283C /* Flashcard.xib in Resources */,
 				6357E42B1BEC7FC800BA25AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,10 +200,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6340673A1BED15BA001B283C /* Deck.swift in Sources */,
+				634067531BED3E4F001B283C /* FlashcardView.swift in Sources */,
+				6340674D1BED3C13001B283C /* iCarousel.m in Sources */,
 				6357E4381BEC802700BA25AB /* CategoryViewController.swift in Sources */,
 				6357E4261BEC7FC800BA25AB /* AppDelegate.swift in Sources */,
 				63A070B21BEC8C53006A79EA /* DifficultyCell.swift in Sources */,
+				634067411BED32E2001B283C /* StudyViewController.swift in Sources */,
+				6340673F1BED19AC001B283C /* DeckManager.swift in Sources */,
 				63A070B01BEC8901006A79EA /* CategoryCell.swift in Sources */,
+				634067381BED0C73001B283C /* UIColor+Flashy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,10 +320,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlashyFlashcards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NelsonJE.FlashyFlashcards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlashyFlashcards/FlashyFlashcards-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -290,10 +337,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlashyFlashcards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NelsonJE.FlashyFlashcards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlashyFlashcards/FlashyFlashcards-Bridging-Header.h";
 			};
 			name = Release;
 		};

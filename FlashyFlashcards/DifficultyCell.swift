@@ -10,5 +10,9 @@ import Foundation
 import UIKit
 
 class DifficultyCell: UICollectionViewCell{
+    var difficulty: String!
+    var category: String!
+    
+    @IBOutlet weak var difficultyLabel: UILabel!
     
 }
