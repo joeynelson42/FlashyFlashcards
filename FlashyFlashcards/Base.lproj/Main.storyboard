@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="207" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MOG-eS-cUA">
-                                <rect key="frame" x="0.0" y="83" width="375" height="584"/>
+                                <rect key="frame" x="0.0" y="139" width="375" height="528"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -30,21 +30,31 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="206"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7h9-uf-KKx">
+                                                    <rect key="frame" x="8" y="15" width="359" height="35"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="LsA-ZL-nQg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jS6-5x-q8d">
-                                                    <rect key="frame" x="0.0" y="4" width="375" height="198"/>
+                                                    <rect key="frame" x="0.0" y="43" width="375" height="159"/>
                                                     <animations/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Kuf-E1-Nqf">
-                                                        <size key="itemSize" width="134" height="185"/>
+                                                        <size key="itemSize" width="221" height="132"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="difficultyCell" id="evx-mJ-8EO" customClass="DifficultyCell" customModule="FlashyFlashcards" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="7" width="134" height="185"/>
+                                                            <rect key="frame" x="10" y="14" width="221" height="132"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="134" height="185"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="221" height="132"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <animations/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -62,9 +72,12 @@
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="jS6-5x-q8d" secondAttribute="bottom" constant="-4" id="Kqa-j6-HpO"/>
+                                                <constraint firstItem="7h9-uf-KKx" firstAttribute="trailing" secondItem="Qb5-kW-KIC" secondAttribute="trailingMargin" id="P2o-Bw-oYJ"/>
                                                 <constraint firstItem="jS6-5x-q8d" firstAttribute="leading" secondItem="Qb5-kW-KIC" secondAttribute="leadingMargin" constant="-8" id="QQd-ax-tYO"/>
+                                                <constraint firstItem="7h9-uf-KKx" firstAttribute="leading" secondItem="Qb5-kW-KIC" secondAttribute="leadingMargin" id="afn-Dz-Vpd"/>
+                                                <constraint firstItem="7h9-uf-KKx" firstAttribute="top" secondItem="Qb5-kW-KIC" secondAttribute="topMargin" constant="7" id="yCq-Fd-WTl"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="jS6-5x-q8d" secondAttribute="trailing" constant="-8" id="yDr-gp-MA1"/>
-                                                <constraint firstItem="jS6-5x-q8d" firstAttribute="top" secondItem="Qb5-kW-KIC" secondAttribute="topMargin" constant="-4" id="yzp-iN-roY"/>
+                                                <constraint firstItem="jS6-5x-q8d" firstAttribute="top" secondItem="Qb5-kW-KIC" secondAttribute="topMargin" constant="35" id="yzp-iN-roY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -83,7 +96,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MOG-eS-cUA" firstAttribute="leading" secondItem="jbZ-8w-jJz" secondAttribute="leadingMargin" constant="-20" id="7oH-or-Rbb"/>
-                            <constraint firstItem="MOG-eS-cUA" firstAttribute="top" secondItem="bVg-f8-qsz" secondAttribute="bottom" constant="63" id="jLR-Ls-sxE"/>
+                            <constraint firstItem="MOG-eS-cUA" firstAttribute="top" secondItem="bVg-f8-qsz" secondAttribute="bottom" constant="119" id="jLR-Ls-sxE"/>
                             <constraint firstItem="Ll4-Da-bb0" firstAttribute="top" secondItem="MOG-eS-cUA" secondAttribute="bottom" id="nI2-vD-UY0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MOG-eS-cUA" secondAttribute="trailing" constant="-20" id="t44-Tg-BBv"/>
                         </constraints>
