@@ -37,6 +37,7 @@ class IntroViewController: UIPageViewController, UIPageViewControllerDataSource,
         
         if index == 0 {
             let vc = self.storyboard!.instantiateViewControllerWithIdentifier("appNameVC") as! AppNamePageViewController
+            vc.pageController = self
             return vc
         }
         
@@ -91,7 +92,6 @@ class IntroViewController: UIPageViewController, UIPageViewControllerDataSource,
             return nil
         }
     }
-    
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
         return self.identifiers.count

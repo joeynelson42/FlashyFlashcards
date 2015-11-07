@@ -14,6 +14,7 @@ class AppNamePageViewController: UIViewController{
     @IBOutlet weak var seeHowLabel: UILabel!
     @IBOutlet weak var arrowImageView: UIImageView!
     
+    var pageController = UIPageViewController()
     var animationTimer = NSTimer()
     
     override func viewDidLoad() {

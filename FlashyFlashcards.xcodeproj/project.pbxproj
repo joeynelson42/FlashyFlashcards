@@ -25,6 +25,9 @@
 		6357E4381BEC802700BA25AB /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6357E4371BEC802700BA25AB /* CategoryViewController.swift */; };
 		63A070B01BEC8901006A79EA /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A070AF1BEC8901006A79EA /* CategoryCell.swift */; };
 		63A070B21BEC8C53006A79EA /* DifficultyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A070B11BEC8C53006A79EA /* DifficultyCell.swift */; };
+		63E3D1D71BEEC0C200719332 /* Existence-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63E3D1D41BEEC0C200719332 /* Existence-Light.otf */; };
+		63E3D1D81BEEC0C200719332 /* Existence-StencilLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63E3D1D51BEEC0C200719332 /* Existence-StencilLight.otf */; };
+		63E3D1D91BEEC0C200719332 /* Existence-UnicaseLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63E3D1D61BEEC0C200719332 /* Existence-UnicaseLight.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		6357E4371BEC802700BA25AB /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		63A070AF1BEC8901006A79EA /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		63A070B11BEC8C53006A79EA /* DifficultyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifficultyCell.swift; sourceTree = "<group>"; };
+		63E3D1D41BEEC0C200719332 /* Existence-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Existence-Light.otf"; sourceTree = "<group>"; };
+		63E3D1D51BEEC0C200719332 /* Existence-StencilLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Existence-StencilLight.otf"; sourceTree = "<group>"; };
+		63E3D1D61BEEC0C200719332 /* Existence-UnicaseLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Existence-UnicaseLight.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,9 @@
 		6357E43A1BEC821F00BA25AB /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				63E3D1D41BEEC0C200719332 /* Existence-Light.otf */,
+				63E3D1D51BEEC0C200719332 /* Existence-StencilLight.otf */,
+				63E3D1D61BEEC0C200719332 /* Existence-UnicaseLight.otf */,
 				6340674B1BED3C13001B283C /* iCarousel.h */,
 				6340674C1BED3C13001B283C /* iCarousel.m */,
 				6357E4251BEC7FC800BA25AB /* AppDelegate.swift */,
@@ -179,7 +188,7 @@
 				TargetAttributes = {
 					6357E4211BEC7FC800BA25AB = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = Q3466BUWH2;
+						DevelopmentTeam = 2RF92UCMKX;
 					};
 				};
 			};
@@ -206,9 +215,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E3D1D91BEEC0C200719332 /* Existence-UnicaseLight.otf in Resources */,
+				63E3D1D81BEEC0C200719332 /* Existence-StencilLight.otf in Resources */,
 				6357E4301BEC7FC800BA25AB /* LaunchScreen.storyboard in Resources */,
 				6357E42D1BEC7FC800BA25AB /* Assets.xcassets in Resources */,
 				6357E42B1BEC7FC800BA25AB /* Main.storyboard in Resources */,
+				63E3D1D71BEEC0C200719332 /* Existence-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +361,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlashyFlashcards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NelsonJE.FlashyFlashcards;
+				PRODUCT_BUNDLE_IDENTIFIER = NelsonJE.FlashyFlash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "FlashyFlashcards/FlashyFlashcards-Bridging-Header.h";
@@ -366,7 +378,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlashyFlashcards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NelsonJE.FlashyFlashcards;
+				PRODUCT_BUNDLE_IDENTIFIER = NelsonJE.FlashyFlash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "FlashyFlashcards/FlashyFlashcards-Bridging-Header.h";
