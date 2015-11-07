@@ -13,6 +13,7 @@ struct Equation{
     var opType: OperationType
     var firstValue: Int!
     var secondValue: Int!
+    var answer: Int!
 }
 
 enum OperationType{

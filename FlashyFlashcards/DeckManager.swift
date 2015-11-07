@@ -97,8 +97,9 @@ class DeckManager{
                 
                 let firstValue = Int(arc4random_uniform(UInt32(range)) + 1)
                 let secondValue = Int(arc4random_uniform(UInt32(range)) + 1)
+                let answer = firstValue + secondValue
                 
-                let equation = Equation.init(opType: OperationType.Addition, firstValue: firstValue, secondValue: secondValue)
+                let equation = Equation.init(opType: OperationType.Addition, firstValue: firstValue, secondValue: secondValue, answer: answer)
                 
                 deck.equations.append(equation)
             }
@@ -112,8 +113,9 @@ class DeckManager{
                 
                 let firstValue = Int(arc4random_uniform(UInt32(range)) + 2)
                 let secondValue = Int(arc4random_uniform(UInt32(firstValue - 1)) + 1)
+                let answer = firstValue - secondValue
                 
-                let equation = Equation.init(opType: OperationType.Subtraction, firstValue: firstValue, secondValue: secondValue)
+                let equation = Equation.init(opType: OperationType.Subtraction, firstValue: firstValue, secondValue: secondValue, answer: answer)
                 
                 deck.equations.append(equation)
             }
@@ -127,8 +129,9 @@ class DeckManager{
                 
                 let firstValue = Int(arc4random_uniform(UInt32(range)) + 1)
                 let secondValue = Int(arc4random_uniform(UInt32(range)) + 1)
+                let answer = firstValue * secondValue
                 
-                let equation = Equation.init(opType: OperationType.Multiplication, firstValue: firstValue, secondValue: secondValue)
+                let equation = Equation.init(opType: OperationType.Multiplication, firstValue: firstValue, secondValue: secondValue, answer: answer)
                 
                 deck.equations.append(equation)
             }
@@ -142,8 +145,9 @@ class DeckManager{
                 
                 let firstValue = Int(arc4random_uniform(UInt32(range)) + 1)
                 let secondValue = Int(arc4random_uniform(UInt32(range)) + 1)
+                let answer = firstValue / secondValue
                 
-                let equation = Equation.init(opType: OperationType.Division, firstValue: firstValue, secondValue: secondValue)
+                let equation = Equation.init(opType: OperationType.Division, firstValue: firstValue, secondValue: secondValue, answer: answer)
                 
                 deck.equations.append(equation)
             }

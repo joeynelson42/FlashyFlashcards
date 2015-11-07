@@ -18,6 +18,7 @@
 		6340675C1BED5CC3001B283C /* AppNamePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340675B1BED5CC3001B283C /* AppNamePageViewController.swift */; };
 		6340675E1BED5CEC001B283C /* CategoryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340675D1BED5CEC001B283C /* CategoryPageViewController.swift */; };
 		634067601BED5D0B001B283C /* StudyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340675F1BED5D0B001B283C /* StudyPageViewController.swift */; };
+		634067621BED848C001B283C /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634067611BED848C001B283C /* CarouselCell.swift */; };
 		6357E4261BEC7FC800BA25AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6357E4251BEC7FC800BA25AB /* AppDelegate.swift */; };
 		6357E42B1BEC7FC800BA25AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6357E4291BEC7FC800BA25AB /* Main.storyboard */; };
 		6357E42D1BEC7FC800BA25AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6357E42C1BEC7FC800BA25AB /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		6340675B1BED5CC3001B283C /* AppNamePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNamePageViewController.swift; sourceTree = "<group>"; };
 		6340675D1BED5CEC001B283C /* CategoryPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPageViewController.swift; sourceTree = "<group>"; };
 		6340675F1BED5D0B001B283C /* StudyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyPageViewController.swift; sourceTree = "<group>"; };
+		634067611BED848C001B283C /* CarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
 		6357E4221BEC7FC800BA25AB /* FlashyFlashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashyFlashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6357E4251BEC7FC800BA25AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6357E42A1BEC7FC800BA25AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				634067371BED0C73001B283C /* UIColor+Flashy.swift */,
 				634067501BED3E43001B283C /* Flashcard.xib */,
 				634067521BED3E4F001B283C /* FlashcardView.swift */,
+				634067611BED848C001B283C /* CarouselCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				63A070B21BEC8C53006A79EA /* DifficultyCell.swift in Sources */,
 				634067411BED32E2001B283C /* StudyViewController.swift in Sources */,
 				6340673F1BED19AC001B283C /* DeckManager.swift in Sources */,
+				634067621BED848C001B283C /* CarouselCell.swift in Sources */,
 				634067601BED5D0B001B283C /* StudyPageViewController.swift in Sources */,
 				6340675C1BED5CC3001B283C /* AppNamePageViewController.swift in Sources */,
 				6340675A1BED5C7B001B283C /* IntroViewController.swift in Sources */,

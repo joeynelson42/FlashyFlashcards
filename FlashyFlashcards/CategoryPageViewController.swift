@@ -23,6 +23,8 @@ class CategoryPageViewController: UIViewController{
     
     override func viewDidLoad() {
         animationContainer.layer.cornerRadius = 10.0
+        
+        animationContainer.layer.zPosition = CGFloat(MAXFLOAT)
     }
     
     override func viewDidAppear(animated: Bool) {

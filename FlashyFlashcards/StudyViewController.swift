@@ -24,6 +24,9 @@ class StudyViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
         
         xButton.layer.cornerRadius = 5.0
         xButton.backgroundColor = UIColor.fromHex(0x92D57F, alpha: 0.5)
+        
+//        let swipe = UISwipeGestureRecognizer(target: self, action: "closeStudyMode")
+//        self.view.addGestureRecognizer(swipe)
     }
     
     func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
@@ -33,8 +36,7 @@ class StudyViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
     
     func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView
     {
-        var label: UILabel
-        var itemView: UIView
+        var itemView: CarouselCell
         
         //create new view if no view is available for recycling
         if (view == nil)
@@ -42,15 +44,16 @@ class StudyViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
             //don't do anything specific to the index within
             //this `if (view == nil) {...}` statement because the view will be
             //recycled and used with other index values later
-            itemView = UIView(frame:CGRect(x:0, y:0, width:450, height:300))
+            itemView = CarouselCell(frame:CGRect(x:0, y:0, width:450, height:300))
             itemView.layer.cornerRadius = 3.0
             itemView.contentMode = .Center
             itemView.backgroundColor = UIColor.whiteColor()
-            label = UILabel(frame:itemView.bounds)
-            label.backgroundColor = UIColor.clearColor()
-            label.textAlignment = .Center
-            label.font = label.font.fontWithSize(80)
-            label.tag = 1
+            itemView.label = UILabel(frame:itemView.bounds)
+            itemView.label.backgroundColor = UIColor.clearColor()
+            itemView.label.textAlignment = .Center
+            itemView.label.font = itemView.label.font.fontWithSize(80)
+            itemView.label.tag = 1
+            itemView.flipped = false
             
             itemView.layer.cornerRadius = 3.0
             itemView.layer.shadowColor = UIColor.blackColor().CGColor
@@ -59,17 +62,18 @@ class StudyViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
             itemView.layer.shadowRadius = 10.0
             itemView.layer.masksToBounds = false
             
-            itemView.addSubview(label)
+            itemView.addSubview(itemView.label)
         }
         else
         {
             //get a reference to the label in the recycled view
-            itemView = view! as UIView
-            label = itemView.viewWithTag(1) as! UILabel!
+            itemView = view! as! CarouselCell
+            itemView.label = itemView.viewWithTag(1) as! UILabel!
+            itemView.flipped = false
         }
 
         let equation = deck.equations[index]
-        label.text = "\(equation.firstValue) \(deck.getOpTypeString(index)) \(equation.secondValue) = ?"
+        itemView.label.text = "\(equation.firstValue) \(deck.getOpTypeString(index)) \(equation.secondValue) = ?"
         
         return itemView
     }
@@ -84,7 +88,26 @@ class StudyViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
     }
     
     func carousel(carousel: iCarousel, didSelectItemAtIndex index: Int) {
-        let cell = carousel.itemViewAtIndex(index)
+        let cell = carousel.itemViewAtIndex(index) as! CarouselCell
+        let equation = deck.equations[index]
+        var updatedLabelText = ""
+        if(cell.flipped){
+            updatedLabelText = "\(equation.firstValue) \(deck.getOpTypeString(index)) \(equation.secondValue) = ?"
+        }
+        else{
+            updatedLabelText = String(equation.answer)
+        }
+        
+        
+        UIView.transitionWithView(cell, duration: 0.4, options: UIViewAnimationOptions.TransitionFlipFromBottom, animations: { void in
+            cell.label.text = "\(updatedLabelText)"}, completion: { finished in
+        cell.label.text = "\(updatedLabelText)"
+        
+        })
+        
+        
+        cell.flipped = !cell.flipped
+        
     }
     
     @IBAction func returnButtonAction(sender: AnyObject) {
