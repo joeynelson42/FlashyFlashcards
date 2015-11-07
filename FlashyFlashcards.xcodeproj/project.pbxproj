@@ -14,6 +14,10 @@
 		6340674D1BED3C13001B283C /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6340674C1BED3C13001B283C /* iCarousel.m */; };
 		634067511BED3E43001B283C /* Flashcard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634067501BED3E43001B283C /* Flashcard.xib */; };
 		634067531BED3E4F001B283C /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634067521BED3E4F001B283C /* FlashcardView.swift */; };
+		6340675A1BED5C7B001B283C /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634067591BED5C7B001B283C /* IntroViewController.swift */; };
+		6340675C1BED5CC3001B283C /* AppNamePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340675B1BED5CC3001B283C /* AppNamePageViewController.swift */; };
+		6340675E1BED5CEC001B283C /* CategoryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340675D1BED5CEC001B283C /* CategoryPageViewController.swift */; };
+		634067601BED5D0B001B283C /* StudyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340675F1BED5D0B001B283C /* StudyPageViewController.swift */; };
 		6357E4261BEC7FC800BA25AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6357E4251BEC7FC800BA25AB /* AppDelegate.swift */; };
 		6357E42B1BEC7FC800BA25AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6357E4291BEC7FC800BA25AB /* Main.storyboard */; };
 		6357E42D1BEC7FC800BA25AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6357E42C1BEC7FC800BA25AB /* Assets.xcassets */; };
@@ -33,6 +37,10 @@
 		6340674C1BED3C13001B283C /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		634067501BED3E43001B283C /* Flashcard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Flashcard.xib; sourceTree = "<group>"; };
 		634067521BED3E4F001B283C /* FlashcardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
+		634067591BED5C7B001B283C /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		6340675B1BED5CC3001B283C /* AppNamePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNamePageViewController.swift; sourceTree = "<group>"; };
+		6340675D1BED5CEC001B283C /* CategoryPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPageViewController.swift; sourceTree = "<group>"; };
+		6340675F1BED5D0B001B283C /* StudyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyPageViewController.swift; sourceTree = "<group>"; };
 		6357E4221BEC7FC800BA25AB /* FlashyFlashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashyFlashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6357E4251BEC7FC800BA25AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6357E42A1BEC7FC800BA25AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +73,17 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		634067561BED5B4A001B283C /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				634067591BED5C7B001B283C /* IntroViewController.swift */,
+				6340675B1BED5CC3001B283C /* AppNamePageViewController.swift */,
+				6340675D1BED5CEC001B283C /* CategoryPageViewController.swift */,
+				6340675F1BED5D0B001B283C /* StudyPageViewController.swift */,
+			);
+			name = Intro;
+			sourceTree = "<group>";
+		};
 		6357E4191BEC7FC700BA25AB = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +103,7 @@
 		6357E4241BEC7FC800BA25AB /* FlashyFlashcards */ = {
 			isa = PBXGroup;
 			children = (
+				634067561BED5B4A001B283C /* Intro */,
 				6357E4391BEC821500BA25AB /* Controllers */,
 				6357E43B1BEC823100BA25AB /* Views */,
 				6340673B1BED186F001B283C /* Model */,
@@ -200,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6340675E1BED5CEC001B283C /* CategoryPageViewController.swift in Sources */,
 				6340673A1BED15BA001B283C /* Deck.swift in Sources */,
 				634067531BED3E4F001B283C /* FlashcardView.swift in Sources */,
 				6340674D1BED3C13001B283C /* iCarousel.m in Sources */,
@@ -208,6 +229,9 @@
 				63A070B21BEC8C53006A79EA /* DifficultyCell.swift in Sources */,
 				634067411BED32E2001B283C /* StudyViewController.swift in Sources */,
 				6340673F1BED19AC001B283C /* DeckManager.swift in Sources */,
+				634067601BED5D0B001B283C /* StudyPageViewController.swift in Sources */,
+				6340675C1BED5CC3001B283C /* AppNamePageViewController.swift in Sources */,
+				6340675A1BED5C7B001B283C /* IntroViewController.swift in Sources */,
 				63A070B01BEC8901006A79EA /* CategoryCell.swift in Sources */,
 				634067381BED0C73001B283C /* UIColor+Flashy.swift in Sources */,
 			);

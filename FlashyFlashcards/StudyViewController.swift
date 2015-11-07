@@ -14,12 +14,16 @@ class StudyViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
     
     var deck: Deck!
     @IBOutlet weak var carousel: iCarousel!
+    @IBOutlet weak var xButton: UIButton!
     
     override func viewDidLoad() {
         DeckManager.deckManager.constructEquations()
         deck = DeckManager.deckManager.deck
         deck.equations = shuffleCards()
         carousel.pagingEnabled = true
+        
+        xButton.layer.cornerRadius = 5.0
+        xButton.backgroundColor = UIColor.fromHex(0x92D57F, alpha: 0.5)
     }
     
     func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
@@ -84,8 +88,17 @@ class StudyViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
     }
     
     @IBAction func returnButtonAction(sender: AnyObject) {
-        DeckManager.deckManager.emptyDeck()
-        self.dismissViewControllerAnimated(true, completion: nil)
+        UIView.animateWithDuration(0.2, animations: {
+            
+            self.xButton.transform = CGAffineTransformMakeScale(0.8, 0.8)
+            }, completion: {finished in
+                UIView.animateWithDuration(0.1, animations: {
+                    self.xButton.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                    }, completion: {finished in
+                        DeckManager.deckManager.emptyDeck()
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                })
+        })
     }
     
     private func shuffleCards() -> [Equation]{
