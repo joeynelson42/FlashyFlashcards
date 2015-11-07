@@ -103,6 +103,14 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         categories = ["Addition", "Subtraction", "Multiplication", "Division"]
     }
     
+    
+    
+    @IBAction func openTutorialAction(sender: AnyObject) {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let tutorialVC = mainStoryboard.instantiateViewControllerWithIdentifier("tutorialVC")
+        self.presentViewController(tutorialVC, animated: true, completion: nil)
+    }
+    
 }
 
 

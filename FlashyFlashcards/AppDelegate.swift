@@ -16,6 +16,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+        let viewedTutorial = defaults.boolForKey("tutorialViewed")
+        var initVC = UIViewController()
+        
+        if viewedTutorial{
+            initVC = mainStoryboard.instantiateViewControllerWithIdentifier("categoryVC")
+        }
+        else{
+            initVC = mainStoryboard.instantiateViewControllerWithIdentifier("tutorialVC")
+        }
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = initVC
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

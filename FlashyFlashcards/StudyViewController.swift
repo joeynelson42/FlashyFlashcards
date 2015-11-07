@@ -16,6 +16,11 @@ class StudyViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
     @IBOutlet weak var carousel: iCarousel!
     @IBOutlet weak var xButton: UIButton!
     
+    var CARD_WIDTH: CGFloat = 0
+    var CARD_HEIGHT: CGFloat = 0
+    
+    var shouldRotate = false
+    
     override func viewDidLoad() {
         DeckManager.deckManager.constructEquations()
         deck = DeckManager.deckManager.deck
@@ -25,8 +30,25 @@ class StudyViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
         xButton.layer.cornerRadius = 5.0
         xButton.backgroundColor = UIColor.fromHex(0x92D57F, alpha: 0.5)
         
-//        let swipe = UISwipeGestureRecognizer(target: self, action: "closeStudyMode")
-//        self.view.addGestureRecognizer(swipe)
+        if UIApplication.sharedApplication().statusBarOrientation == .Portrait || UIApplication.sharedApplication().statusBarOrientation == .PortraitUpsideDown{
+            shouldRotate = true
+        }
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        if shouldRotate{
+            let value = UIInterfaceOrientation.LandscapeLeft.rawValue
+            UIDevice.currentDevice().setValue(value, forKey: "orientation")
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if shouldRotate{
+            let value = UIInterfaceOrientation.Portrait.rawValue
+            UIDevice.currentDevice().setValue(value, forKey: "orientation")
+        }
     }
     
     func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
@@ -44,7 +66,8 @@ class StudyViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
             //don't do anything specific to the index within
             //this `if (view == nil) {...}` statement because the view will be
             //recycled and used with other index values later
-            itemView = CarouselCell(frame:CGRect(x:0, y:0, width:450, height:300))
+            getCarouselCellSize()
+            itemView = CarouselCell(frame:CGRect(x:0, y:0, width:CARD_WIDTH, height:CARD_HEIGHT))
             itemView.layer.cornerRadius = 3.0
             itemView.contentMode = .Center
             itemView.backgroundColor = UIColor.whiteColor()
@@ -53,6 +76,7 @@ class StudyViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
             itemView.label.textAlignment = .Center
             itemView.label.font = itemView.label.font.fontWithSize(80)
             itemView.label.tag = 1
+            itemView.label.adjustsFontSizeToFitWidth = true
             itemView.flipped = false
             
             itemView.layer.cornerRadius = 3.0
@@ -78,6 +102,19 @@ class StudyViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
         return itemView
     }
     
+    func getCarouselCellSize(){
+        if(UIScreen.mainScreen().bounds.height > UIScreen.mainScreen().bounds.width){
+            CARD_WIDTH = UIScreen.mainScreen().bounds.width - 50
+            CARD_HEIGHT = UIScreen.mainScreen().bounds.height - 250
+        }
+        else{
+            CARD_WIDTH = UIScreen.mainScreen().bounds.width - 200
+            CARD_HEIGHT = UIScreen.mainScreen().bounds.height - 50
+        }
+        
+        
+    }
+    
     func carousel(carousel: iCarousel, valueForOption option: iCarouselOption, withDefault value: CGFloat) -> CGFloat
     {
         if (option == .Spacing)
@@ -85,6 +122,15 @@ class StudyViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
             return value * 1.1
         }
         return value
+    }
+    
+//    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+//        carousel.reloadData()
+//    }
+    
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        carousel.reloadData()
+        carousel.layoutSubviews()
     }
     
     func carousel(carousel: iCarousel, didSelectItemAtIndex index: Int) {

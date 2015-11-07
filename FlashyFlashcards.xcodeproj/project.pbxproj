@@ -12,7 +12,6 @@
 		6340673F1BED19AC001B283C /* DeckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340673E1BED19AC001B283C /* DeckManager.swift */; };
 		634067411BED32E2001B283C /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634067401BED32E2001B283C /* StudyViewController.swift */; };
 		6340674D1BED3C13001B283C /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6340674C1BED3C13001B283C /* iCarousel.m */; };
-		634067511BED3E43001B283C /* Flashcard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634067501BED3E43001B283C /* Flashcard.xib */; };
 		634067531BED3E4F001B283C /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634067521BED3E4F001B283C /* FlashcardView.swift */; };
 		6340675A1BED5C7B001B283C /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634067591BED5C7B001B283C /* IntroViewController.swift */; };
 		6340675C1BED5CC3001B283C /* AppNamePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340675B1BED5CC3001B283C /* AppNamePageViewController.swift */; };
@@ -36,7 +35,6 @@
 		6340674A1BED3C12001B283C /* FlashyFlashcards-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlashyFlashcards-Bridging-Header.h"; sourceTree = "<group>"; };
 		6340674B1BED3C13001B283C /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		6340674C1BED3C13001B283C /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
-		634067501BED3E43001B283C /* Flashcard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Flashcard.xib; sourceTree = "<group>"; };
 		634067521BED3E4F001B283C /* FlashcardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
 		634067591BED5C7B001B283C /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		6340675B1BED5CC3001B283C /* AppNamePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNamePageViewController.swift; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 				63A070AF1BEC8901006A79EA /* CategoryCell.swift */,
 				63A070B11BEC8C53006A79EA /* DifficultyCell.swift */,
 				634067371BED0C73001B283C /* UIColor+Flashy.swift */,
-				634067501BED3E43001B283C /* Flashcard.xib */,
 				634067521BED3E4F001B283C /* FlashcardView.swift */,
 				634067611BED848C001B283C /* CarouselCell.swift */,
 			);
@@ -211,7 +208,6 @@
 			files = (
 				6357E4301BEC7FC800BA25AB /* LaunchScreen.storyboard in Resources */,
 				6357E42D1BEC7FC800BA25AB /* Assets.xcassets in Resources */,
-				634067511BED3E43001B283C /* Flashcard.xib in Resources */,
 				6357E42B1BEC7FC800BA25AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

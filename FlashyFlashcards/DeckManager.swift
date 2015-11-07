@@ -124,7 +124,8 @@ class DeckManager{
     
     func constructMultiplicationEquations(difficulties: [String]){
         for level in difficulties{
-            let range = findRange(level) //equations will use number 0-range
+            let range = findRange(level) / 2 //equations will use number 0-range
+            
             for _ in 0...20{
                 
                 let firstValue = Int(arc4random_uniform(UInt32(range)) + 1)
@@ -143,8 +144,27 @@ class DeckManager{
             let range = findRange(level) //equations will use number 0-range
             for _ in 0...20{
                 
-                let firstValue = Int(arc4random_uniform(UInt32(range)) + 1)
-                let secondValue = Int(arc4random_uniform(UInt32(range)) + 1)
+                var solvable = false
+                
+                var firstValue = 0
+                var secondValue = 0
+                
+                while(!solvable){
+                    firstValue = Int(arc4random_uniform(UInt32(range * 2)) + 2)
+                    secondValue = Int(arc4random_uniform(UInt32(firstValue - 1)) + 2)
+                    
+                    if(firstValue % secondValue != 0){
+                        continue
+                    }
+                    else if(firstValue == secondValue){
+                        continue
+                    }
+                    else{
+                        solvable = true
+                    }
+                }
+                
+                
                 let answer = firstValue / secondValue
                 
                 let equation = Equation.init(opType: OperationType.Division, firstValue: firstValue, secondValue: secondValue, answer: answer)
