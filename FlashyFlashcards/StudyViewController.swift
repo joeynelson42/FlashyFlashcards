@@ -15,6 +15,9 @@ class StudyViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
     var deck: Deck!
     @IBOutlet weak var carousel: iCarousel!
     @IBOutlet weak var xButton: UIButton!
+
+    @IBOutlet weak var loadViewContainer: UIView!
+    @IBOutlet weak var loadLightning: UIImageView!
     
     var CARD_WIDTH: CGFloat = 0
     var CARD_HEIGHT: CGFloat = 0
@@ -33,7 +36,6 @@ class StudyViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
         if UIApplication.sharedApplication().statusBarOrientation == .Portrait || UIApplication.sharedApplication().statusBarOrientation == .PortraitUpsideDown{
             shouldRotate = true
         }
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -49,6 +51,8 @@ class StudyViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
             let value = UIInterfaceOrientation.Portrait.rawValue
             UIDevice.currentDevice().setValue(value, forKey: "orientation")
         }
+        
+        animateLoadLightning()
     }
     
     func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
@@ -168,6 +172,18 @@ class StudyViewController: UIViewController, iCarouselDataSource, iCarouselDeleg
                         self.dismissViewControllerAnimated(true, completion: nil)
                 })
         })
+    }
+    
+    private func animateLoadLightning(){
+        let animationTimer = NSTimer.scheduledTimerWithTimeInterval(1.2, target: self, selector: "hideLoadScreen", userInfo: nil, repeats: false)
+        
+        UIView.animateWithDuration(0.4, delay: 0, options: [.Repeat, .Autoreverse], animations: {
+                self.loadLightning.transform = CGAffineTransformMakeScale(0.8, 0.8)
+            }, completion: nil)
+    }
+    
+    func hideLoadScreen(){
+        UIView.animateWithDuration(0.5, delay: 0, options: .BeginFromCurrentState, animations: {self.loadViewContainer.alpha = 0.0}, completion: nil)
     }
     
     private func shuffleCards() -> [Equation]{

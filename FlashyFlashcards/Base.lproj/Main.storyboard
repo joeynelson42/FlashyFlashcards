@@ -718,12 +718,35 @@
                                     <action selector="returnButtonAction:" destination="Ijd-Mm-Eq0" eventType="touchUpInside" id="ACo-Bs-VU7"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfd-SX-IEe">
+                                <rect key="frame" x="-37" y="-38" width="742" height="450"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenLightning" translatesAutoresizingMaskIntoConstraints="NO" id="KrW-Yb-OVZ">
+                                        <rect key="frame" x="332" y="158" width="71" height="128"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="71" id="3au-kx-ryL"/>
+                                            <constraint firstAttribute="height" constant="128" id="Z54-Ui-qdu"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="KrW-Yb-OVZ" firstAttribute="centerY" secondItem="sfd-SX-IEe" secondAttribute="centerY" constant="-3" id="VOT-mK-SpL"/>
+                                    <constraint firstItem="KrW-Yb-OVZ" firstAttribute="centerX" secondItem="sfd-SX-IEe" secondAttribute="centerX" constant="-3.5" id="YZc-VU-kfB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="sfd-SX-IEe" secondAttribute="trailing" constant="-58" id="03f-gB-ujT"/>
                             <constraint firstItem="gp6-Tq-pXc" firstAttribute="top" secondItem="808-CC-WmX" secondAttribute="bottom" id="3HT-gh-md3"/>
+                            <constraint firstItem="sfd-SX-IEe" firstAttribute="leading" secondItem="5J4-2y-CCW" secondAttribute="leadingMargin" constant="-57" id="5fy-Ti-IMh"/>
+                            <constraint firstItem="NCv-0b-iQT" firstAttribute="top" secondItem="sfd-SX-IEe" secondAttribute="bottom" constant="-37" id="5xI-YN-b56"/>
                             <constraint firstAttribute="leadingMargin" secondItem="gp6-Tq-pXc" secondAttribute="leading" constant="20" id="BEm-rJ-aPR"/>
+                            <constraint firstItem="sfd-SX-IEe" firstAttribute="top" secondItem="808-CC-WmX" secondAttribute="bottom" constant="-38" id="Dvk-9Y-2Wt"/>
                             <constraint firstItem="cXl-0N-BF9" firstAttribute="top" secondItem="5J4-2y-CCW" secondAttribute="topMargin" constant="-5" id="DyG-mp-UWH"/>
                             <constraint firstItem="SpN-pa-mv6" firstAttribute="centerY" secondItem="5J4-2y-CCW" secondAttribute="centerY" id="JBI-Rs-X0X"/>
                             <constraint firstItem="SpN-pa-mv6" firstAttribute="leading" secondItem="5J4-2y-CCW" secondAttribute="leadingMargin" constant="-20" id="OwN-kC-naI"/>
@@ -732,12 +755,17 @@
                             <constraint firstAttribute="trailingMargin" secondItem="cXl-0N-BF9" secondAttribute="trailing" constant="-69" id="zYj-UT-NbS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SpN-pa-mv6" secondAttribute="trailing" constant="-20" id="zeu-ST-wNc"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="carousel" destination="SpN-pa-mv6" id="FTR-5L-k4t"/>
+                        <outlet property="loadLightning" destination="KrW-Yb-OVZ" id="sfp-7G-n5A"/>
+                        <outlet property="loadViewContainer" destination="sfd-SX-IEe" id="DDg-Tn-nnW"/>
                         <outlet property="xButton" destination="gp6-Tq-pXc" id="R4x-Q3-8tg"/>
                     </connections>
                 </viewController>
@@ -747,6 +775,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="greenLightning" width="101" height="226"/>
         <image name="greenLightningArrow@1x" width="398" height="139"/>
         <image name="helpIcon@1x" width="135" height="135"/>
         <image name="introBG" width="286" height="262"/>
